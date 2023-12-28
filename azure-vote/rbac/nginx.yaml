@@ -1,0 +1,26 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: get-nginx-sa
+  namespace: nginx
+rules:
+- apiGroups: [""]
+  resources: ["serviceaccounts"]
+  verbs: ["get"]
+
+
+---
+
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: get-nginx-sa-binding
+  namespace: nginx
+subjects:
+- kind: ServiceAccount
+  name: flux-applier
+  namespace: cluster-config
+roleRef:
+  kind: Role  # Use ClusterRole here if you defined a ClusterRole.
+  name: get-nginx-sa
+  apiGroup: rbac.authorization.k8s.io

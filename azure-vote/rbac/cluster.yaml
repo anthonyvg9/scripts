@@ -1,0 +1,23 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole  # Use ClusterRole if you want to grant permissions across all namespaces. Use Role for a specific namespace.
+metadata:
+  name: secret-reader
+rules:
+- apiGroups: [""]
+  resources: ["secrets"]
+  verbs: ["list"]
+
+--- 
+
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding  # Use ClusterRoleBinding if you're using a ClusterRole. Use RoleBinding for a Role.
+metadata:
+  name: secret-reader-binding
+subjects:
+- kind: ServiceAccount
+  name: flux-applier
+  namespace: cluster-config  # Specify the namespace of the service account
+roleRef:
+  kind: ClusterRole  # Use ClusterRole here if you defined a ClusterRole above.
+  name: secret-reader
+  apiGroup: rbac.authorization.k8s.io

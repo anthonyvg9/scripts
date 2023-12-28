@@ -1,0 +1,138 @@
+2023-10-25 17:40:26,566 - INFO - BambooHR Response Code: 200
+2023-10-25 17:40:26,566 - INFO - BambooHR Response Content: <?xml version="1.0"?>
+<requests>
+ <request id="1626">
+  <employee id="118">Anthony Velasco</employee>
+  <start>2023-10-13</start>
+  <end>2023-10-13</end>
+  <created>2023-09-25</created>
+  <status lastChanged="2023-09-25" lastChangedByUserId="2623">requested</status>
+  <type id="4" icon="time-off-luggage">Personal Day Off</type>
+  <amount unit="days">1</amount>
+  <dates>
+   <date ymd="2023-10-13" amount="1"/>
+  </dates>
+  <notes/>
+ </request>
+ <request id="1627">
+  <employee id="118">Anthony Velasco</employee>
+  <start>2023-11-06</start>
+  <end>2023-11-10</end>
+  <created>2023-09-25</created>
+  <status lastChanged="2023-09-25" lastChangedByUserId="2623">superceded</status>
+  <type id="7" icon="time-off-calendar">Business Trip</type>
+  <amount unit="days">5</amount>
+  <dates>
+   <date ymd="2023-11-06" amount="1"/>
+   <date ymd="2023-11-07" amount="1"/>
+   <date ymd="2023-11-08" amount="1"/>
+   <date ymd="2023-11-09" amount="1"/>
+   <date ymd="2023-11-10" amount="1"/>
+  </dates>
+  <notes/>
+ </request>
+ <request id="1628">
+  <employee id="118">Anthony Velasco</employee>
+  <start>2023-11-06</start>
+  <end>2023-11-10</end>
+  <created>2023-09-25</created>
+  <status lastChanged="2023-09-25" lastChangedByUserId="2623">requested</status>
+  <type id="7" icon="time-off-calendar">Business Trip</type>
+  <amount unit="days">5</amount>
+  <dates>
+   <date ymd="2023-11-06" amount="1"/>
+   <date ymd="2023-11-07" amount="1"/>
+   <date ymd="2023-11-08" amount="1"/>
+   <date ymd="2023-11-09" amount="1"/>
+   <date ymd="2023-11-10" amount="1"/>
+  </dates>
+  <notes>
+   <note from="employee">KubeCon 2023</note>
+  </notes>
+ </request>
+ <request id="1639">
+  <employee id="118">Anthony Velasco</employee>
+  <start>2023-11-22</start>
+  <end>2023-12-01</end>
+  <created>2023-09-30</created>
+  <status lastChanged="2023-09-30" lastChangedByUserId="2623">requested</status>
+  <type id="1" icon="palm-trees">Annual Vacation</type>
+  <amount unit="days">7</amount>
+  <dates>
+   <date ymd="2023-11-22" amount="1"/>
+   <date ymd="2023-11-23" amount="0"/>
+   <date ymd="2023-11-24" amount="1"/>
+   <date ymd="2023-11-25" amount="0"/>
+   <date ymd="2023-11-26" amount="0"/>
+   <date ymd="2023-11-27" amount="1"/>
+   <date ymd="2023-11-28" amount="1"/>
+   <date ymd="2023-11-29" amount="1"/>
+   <date ymd="2023-11-30" amount="1"/>
+   <date ymd="2023-12-01" amount="1"/>
+  </dates>
+  <notes/>
+ </request>
+</requests>
+
+2023-10-25 17:40:26,567 - INFO - Filtered BambooHR JSON Response: []
+2023-10-25 17:40:26,976 - INFO - Opsgenie schedule data fetched for anthony@cast.ai: {
+    "id": "8ef9c60f-3cdb-45d7-9861-186d3a064fc1",
+    "name": "US West",
+    "startDate": "2023-09-26T12:00:00Z",
+    "endDate": null,
+    "type": "daily",
+    "length": 1,
+    "participants": [
+        {
+            "type": "user",
+            "id": "8a7e7733-a397-453a-860c-b3870364bb17",
+            "username": "anthony@cast.ai"
+        }
+    ],
+    "timeRestriction": {
+        "type": "weekday-and-time-of-day",
+        "restrictions": [
+            {
+                "startDay": "monday",
+                "endDay": "monday",
+                "startHour": 12,
+                "endHour": 21,
+                "startMin": 0,
+                "endMin": 0
+            },
+            {
+                "startDay": "tuesday",
+                "endDay": "tuesday",
+                "startHour": 12,
+                "endHour": 21,
+                "startMin": 0,
+                "endMin": 0
+            },
+            {
+                "startDay": "wednesday",
+                "endDay": "wednesday",
+                "startHour": 12,
+                "endHour": 21,
+                "startMin": 0,
+                "endMin": 0
+            },
+            {
+                "startDay": "thursday",
+                "endDay": "thursday",
+                "startHour": 12,
+                "endHour": 21,
+                "startMin": 0,
+                "endMin": 0
+            },
+            {
+                "startDay": "friday",
+                "endDay": "friday",
+                "startHour": 12,
+                "endHour": 21,
+                "startMin": 0,
+                "endMin": 0
+            }
+        ]
+    }
+}
+2023-10-25 17:40:27,559 - ERROR - Error occurred. Status code: 201

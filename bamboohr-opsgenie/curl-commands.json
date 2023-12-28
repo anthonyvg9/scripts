@@ -1,0 +1,64 @@
+curl -X GET "https://api.opsgenie.com/v2/schedules" -H "Authorization: GenieKey 564ac153-b565-48ae-955d-14292fbb077c" | jq '.data[] | select(.name == "Anthony Velasco")'
+
+curl -X POST "https://api.opsgenie.com/v2/schedules/601ccdc8-7615-4edc-bebf-bfe731da9177/overrides" -H "Authorization: GenieKey 564ac153-b565-48ae-955d-14292fbb077c" -H "Content-Type: application/json" -d '
+{
+	"user": {
+		"type": "none"
+	},
+	"startDate": "2023-11-06T12:00:00-05:00",
+	"endDate": "2023-11-06T21:00:00-05:00",
+	"rotations": [
+		{
+            "name": "US West"
+		}
+	]
+}'
+
+
+curl -X POST "https://api.opsgenie.com/v2/schedules/601ccdc8-7615-4edc-bebf-bfe731da9177/overrides" -H "Authorization: GenieKey 564ac153-b565-48ae-955d-14292fbb077c" -H "Content-Type: application/json" -d '
+{
+	"user" : {
+		"type" : "user",
+		"username": "anthony@cast.ai"
+	},
+    {
+        "type": "none"
+    },
+    "startDate": "2023-11-06T12:00:00Z",
+    "endDate": "2023-11-06T21:00:00Z",
+	"rotations" : [
+		{
+            "name": "US West"
+		}
+	]
+}'
+
+curl -X POST "https://api.opsgenie.com/v2/schedules/601ccdc8-7615-4edc-bebf-bfe731da9177/overrides" -H "Authorization: GenieKey 564ac153-b565-48ae-955d-14292fbb077c" -H "Content-Type: application/json" -d '
+{
+	"user" : {
+		"type" : "user",
+		"username": "anthony@cast.ai"
+	},
+	"type": "none",
+	"startDate": "2023-11-06T12:00:00Z",
+	"endDate": "2023-11-06T21:00:00Z",
+	"rotations" : [
+		{
+            "name": "US West"
+		}
+	]
+}'
+
+curl -X POST "https://api.opsgenie.com/v2/schedules/601ccdc8-7615-4edc-bebf-bfe731da9177/overrides" -H "Authorization: GenieKey 564ac153-b565-48ae-955d-14292fbb077c" -H "Content-Type: application/json" -d '
+{
+	"user": {
+		"type": "none"
+	},
+	"startDate": "2023-11-06T12:00:00-05:00",
+	"endDate": "2023-11-06T21:00:00-05:00",
+	"rotations": [
+		{
+            "name": "US West"
+		}
+	]
+}'
