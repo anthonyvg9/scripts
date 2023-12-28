@@ -1,4 +1,0 @@
-kubernetes
-
-openai
-tiktoken
