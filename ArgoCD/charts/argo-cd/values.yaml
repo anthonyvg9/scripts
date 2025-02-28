@@ -1,10 +1,7 @@
-argo-cd:
-  dex:
-    enabled: false
-  notifications:
-    enabled: false
-  applicationSet:
-    enabled: false
-  server:
-    extraArgs:
-      - --insecure
+castai:
+  apiKey: "49ba8e95da5a34bb75b4f6d432d1aa75ce1bf27d26eaa5115fa707182c89c3b0"
+  clusterIdSecretKeyRef:
+    name: "castai-cluster-id"
+    key: "CLUSTER_ID"
+autoscaling:
+  enabled: true
