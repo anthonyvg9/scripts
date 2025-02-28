@@ -1,3 +1,4 @@
+commonLabels: {}
 castai:
   apiKey: "49ba8e95da5a34bb75b4f6d432d1aa75ce1bf27d26eaa5115fa707182c89c3b0"
   clusterIdSecretKeyRef:
